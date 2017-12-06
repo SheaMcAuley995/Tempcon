@@ -21,7 +21,8 @@ public:
 	bool empty() const;
 	void clear();
 	void insert(int value, size_t index);
-	void Erase(int index);
+	void Erase(size_t index);
+	int Count(int value);
 
 private:
 	intLinkedListNode* head;

@@ -137,6 +137,29 @@ void intLinkedList::insert(int value, size_t index)
 	
 }
 
+void intLinkedList::Erase(size_t index)
+{
+	assert(index < size());
+
+	intLinkedListNode *iter = head;
+	intLinkedListNode *prev = head;
+	int counter = 0;
+
+	while (iter->next != nullptr && counter != index)
+	{
+		if (counter == index - 1)
+		{
+			prev = iter;
+		}
+
+		iter = iter->next;
+		counter++;
+	}
+	assert(counter == index);
+	prev->next = iter->next;
+	delete iter;
+}
+
 intLinkedList::intLinkedListNode * intLinkedList::findLastNode()
 {
 	intLinkedListNode* currentNode = head;
