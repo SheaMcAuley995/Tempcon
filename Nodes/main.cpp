@@ -1,19 +1,19 @@
 #include "intvector.h"
 #include "intlinkedlist.h"
 #include "test.h"
-
+#include "binarytree.h"
 int main()
 {
-	intVector nums;
-	intLinkedList nooms;
+	binaryTree* point;
+	binaryTree squireel(92);
 
 
-	nooms.appened(1);
-	nooms.appened(2);
-	nooms.appened(3);
-	nooms.appened(4);
-	nooms.appened(5);
-	nooms.insert(15, 3);
+	squireel.add(19);
+	squireel.add(7);
+	squireel.add(100);
+	squireel.add(98);
+	squireel.add(99);
+	//squireel.add(8);
 	//nooms.~intLinkedList();
 /*
 	nums.append(1);
