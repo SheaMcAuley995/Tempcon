@@ -71,6 +71,10 @@ void binaryTree::add(int value)
 
 }
 
+void binaryTree::insert(int key)
+{
+}
+
 int binaryTree::max(node * current)
 {
 
@@ -110,6 +114,20 @@ void binaryTree::destroy(node * leaf)
 	destroy(leaf->left);
 	destroy(leaf->right);
 	delete leaf;
+}
+
+node * binaryTree::search(int key, node * leaf)
+{
+	if (leaf != nullptr)
+	{
+		if (key == leaf->key_value)
+			return leaf;
+		if (key<leaf->key_value)
+			return search(key, leaf->left);
+		else
+			return search(key, leaf->right);
+	}
+	else return NULL;
 }
 
 binaryTree::~binaryTree()
